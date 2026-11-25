@@ -1,0 +1,70 @@
+{
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU (6GB VRAM)",
+  "hardware_provider": "CUDAExecutionProvider",
+  "tests": {
+    "hindi_b1": {
+      "batch_size": 1,
+      "sequential_ms": 77.82119333278388,
+      "batched_ms": 41.05508666640768,
+      "speedup": 1.8955310937501726,
+      "exact_match": true,
+      "max_conf_delta": 0.0
+    },
+    "hindi_b2": {
+      "batch_size": 2,
+      "sequential_ms": 123.72697333339602,
+      "batched_ms": 77.96650666665907,
+      "speedup": 1.5869246760327862,
+      "exact_match": true,
+      "max_conf_delta": 0.0005481839179992676
+    },
+    "hindi_b4": {
+      "batch_size": 4,
+      "sequential_ms": 144.01536666749357,
+      "batched_ms": 45.61663333248968,
+      "speedup": 3.1570801294737603,
+      "exact_match": true,
+      "max_conf_delta": 0.00044344613949454104
+    },
+    "hindi_b8": {
+      "batch_size": 8,
+      "sequential_ms": 381.9283200001034,
+      "batched_ms": 100.33627999946475,
+      "speedup": 3.8064827597967636,
+      "exact_match": true,
+      "max_conf_delta": 0.00042079389095306396
+    },
+    "english_b1": {
+      "batch_size": 1,
+      "sequential_ms": 48.20457333310818,
+      "batched_ms": 46.761306666303426,
+      "speedup": 1.0308645495538469,
+      "exact_match": true,
+      "max_conf_delta": 0.0
+    },
+    "english_b2": {
+      "batch_size": 2,
+      "sequential_ms": 470.443226666733,
+      "batched_ms": 47.35476000156874,
+      "speedup": 9.934444323044788,
+      "exact_match": true,
+      "max_conf_delta": 0.0007635184696742625
+    },
+    "english_b4": {
+      "batch_size": 4,
+      "sequential_ms": 523.8518333334165,
+      "batched_ms": 61.45041999989189,
+      "speedup": 8.524788493460877,
+      "exact_match": true,
+      "max_conf_delta": 0.013374227285385176
+    },
+    "english_b8": {
+      "batch_size": 8,
+      "sequential_ms": 1476.9841666663222,
+      "batched_ms": 120.90332666606021,
+      "speedup": 12.216240920697006,
+      "exact_match": true,
+      "max_conf_delta": 0.010591840744018532
+    }
+  }
+}

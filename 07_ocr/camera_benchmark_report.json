@@ -1,0 +1,109 @@
+{
+  "benchmark_timestamp": "2026-11-20 01:55:13",
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU (6GB VRAM)",
+    "cpu": "Intel/AMD x86_64 host processor",
+    "os": "Windows 11",
+    "onnxruntime_version": "1.20.0"
+  },
+  "cuda_gpu": {
+    "provider": "CUDA",
+    "active_providers": {
+      "detector": "CUDAExecutionProvider",
+      "recognizer_hindi": "CUDAExecutionProvider",
+      "recognizer_english": "CUDAExecutionProvider"
+    },
+    "resolution": "1920x1080",
+    "initialization_ms": 11138.54720001109,
+    "first_inference_cold_ms": 4184.857299987925,
+    "measured_iterations": 50,
+    "detection_count": 5,
+    "recognition_count": 5,
+    "primary_language": "MIXED",
+    "sample_recognized_text": "नमस्ते भारत EMERGENCY EXIT\nदल्ली विश्ववद्यालय Gate 4B - Terminal 2\nRoom 402: Chief Medical Officer",
+    "metrics": {
+      "detection": {
+        "min_ms": 129.98130000778474,
+        "median_ms": 194.60735001484863,
+        "mean_ms": 193.4009640023578,
+        "p95_ms": 257.09630000492325,
+        "max_ms": 287.6601000025403,
+        "std_dev_ms": 39.46377729260577
+      },
+      "routing": {
+        "min_ms": 28.12680002534762,
+        "median_ms": 38.578949999646284,
+        "mean_ms": 41.082411997485906,
+        "p95_ms": 56.296659958024975,
+        "max_ms": 68.64810001570731,
+        "std_dev_ms": 8.451785036261214
+      },
+      "recognition": {
+        "min_ms": 540.5028999957722,
+        "median_ms": 776.256299999659,
+        "mean_ms": 785.5675460054772,
+        "p95_ms": 996.8622300119022,
+        "max_ms": 1214.1525999759324,
+        "std_dev_ms": 140.53186907904836
+      },
+      "total_end_to_end": {
+        "min_ms": 709.8525000037625,
+        "median_ms": 1032.340400008252,
+        "mean_ms": 1034.3702819978353,
+        "p95_ms": 1269.9342149848235,
+        "max_ms": 1533.8716999976896,
+        "std_dev_ms": 170.97319378386217
+      }
+    }
+  },
+  "cpu_fallback": {
+    "provider": "CPU",
+    "active_providers": {
+      "detector": "CPUExecutionProvider",
+      "recognizer_hindi": "CPUExecutionProvider",
+      "recognizer_english": "CPUExecutionProvider"
+    },
+    "resolution": "1920x1080",
+    "initialization_ms": 3525.891099998262,
+    "first_inference_cold_ms": 6515.446600009454,
+    "measured_iterations": 10,
+    "detection_count": 5,
+    "recognition_count": 5,
+    "primary_language": "MIXED",
+    "sample_recognized_text": "नमस्ते भारत EMERGENCY EXIT\nदल्ली विश्ववद्यालय Gate 4B - Terminal 2\nRoom 402: Chief Medical Officer",
+    "metrics": {
+      "detection": {
+        "min_ms": 1923.1617999903392,
+        "median_ms": 2165.028949995758,
+        "mean_ms": 2231.2076499976683,
+        "p95_ms": 2707.585655005823,
+        "max_ms": 2871.888800000306,
+        "std_dev_ms": 264.3538761488759
+      },
+      "routing": {
+        "min_ms": 82.63069999520667,
+        "median_ms": 98.67305001534987,
+        "mean_ms": 103.93040000344627,
+        "p95_ms": 135.61912000732258,
+        "max_ms": 154.42030000849627,
+        "std_dev_ms": 19.15349467175824
+      },
+      "recognition": {
+        "min_ms": 3669.997700082604,
+        "median_ms": 3959.6595500188414,
+        "mean_ms": 3949.1898300184403,
+        "p95_ms": 4187.249620005605,
+        "max_ms": 4236.756999976933,
+        "std_dev_ms": 179.15712027172765
+      },
+      "total_end_to_end": {
+        "min_ms": 5886.18359999964,
+        "median_ms": 6257.499100000132,
+        "mean_ms": 6333.550839999225,
+        "p95_ms": 6904.865749995224,
+        "max_ms": 6969.777799997246,
+        "std_dev_ms": 373.2106067481783
+      }
+    }
+  }
+}

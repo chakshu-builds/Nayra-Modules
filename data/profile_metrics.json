@@ -1,0 +1,18 @@
+{
+  "orchestration_construction_latency_ms": 36.05,
+  "total_cold_model_load_ms": 8310.5,
+  "full_cold_startup_ms": 8346.55,
+  "model_breakdown_ms": {
+    "yolov10n_onnx_load_ms": 89.2,
+    "kokoro_tts_onnx_load_ms": 1595.38,
+    "whisper_stt_tiny_load_ms": 6625.92
+  },
+  "mean_query_latency_ms": 3.835,
+  "median_query_latency_ms": 0.96,
+  "p95_query_latency_ms": 17.573,
+  "max_query_latency_ms": 32.576,
+  "python_heap_peak_mb": 21.4,
+  "python_heap_growth_100q_kb": -49.49,
+  "total_process_rss_mb": 181.84,
+  "thread_leak_delta": 1
+}

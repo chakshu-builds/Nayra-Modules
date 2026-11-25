@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-20 21:09:47",
+    "os": "Windows 11",
+    "cpu_cores": 12,
+    "device": "CPUExecutionProvider (intra_op=8, ORT_ENABLE_ALL)"
+  },
+  "initialization": {
+    "cold_init_ms": 1009.0,
+    "baseline_ram_mb": 49.86,
+    "post_init_ram_mb": 739.61
+  },
+  "synthesis_benchmarks": {
+    "English": {
+      "text": "Please proceed carefully. An obstacle is ahead.",
+      "audio_duration_sec": 3.03,
+      "synthesis_time_ms": 1339.95,
+      "rtf": 0.4423
+    },
+    "Hindi": {
+      "text": "\u0928\u092e\u0938\u094d\u0924\u0947, \u0906\u092a\u0915\u093e \u0938\u094d\u0935\u093e\u0917\u0924 \u0939\u0948\u0964 \u0915\u0943\u092a\u092f\u093e \u0906\u0917\u0947 \u092c\u0922\u093c\u093f\u090f, \u0930\u093e\u0938\u094d\u0924\u093e \u0938\u093e\u092b \u0939\u0948\u0964",
+      "audio_duration_sec": 4.71,
+      "synthesis_time_ms": 1767.5,
+      "rtf": 0.3749
+    },
+    "Hinglish": {
+      "text": "\u092f\u0939 \u0926\u0935\u093e\u0908 twice a day \u0932\u0947\u0928\u0940 \u0939\u0948\u0964 \u0915\u0943\u092a\u092f\u093e \u0905\u092a\u0928\u093e ID card \u0938\u093e\u0925 \u0930\u0916\u0947\u0902\u0964",
+      "audio_duration_sec": 5.8,
+      "synthesis_time_ms": 1907.85,
+      "rtf": 0.3288
+    }
+  },
+  "ttfa_benchmarks": {
+    "English_Alert": {
+      "text": "Navigation guidance updated.",
+      "priority": 1,
+      "ttfa_ms": 902.68,
+      "total_playback_ms": 2766.83
+    },
+    "Hindi_Alert": {
+      "text": "\u0938\u093e\u0935\u0927\u093e\u0928! \u0906\u0917\u0947 \u0938\u0940\u0922\u093c\u093f\u092f\u093e\u0901 \u0939\u0948\u0902\u0964",
+      "priority": 0,
+      "ttfa_ms": 657.87,
+      "total_playback_ms": 3587.82
+    }
+  },
+  "long_paragraph_streaming": {
+    "text_length_chars": 172,
+    "ttfa_ms": 1654.84,
+    "total_duration_ms": 21177.36
+  },
+  "preemption_and_stop": {
+    "stop_latency_ms": 0.146,
+    "critical_preemption_ttfa_ms": 1658.66
+  },
+  "camera_coexistence": {
+    "baseline_camera_fps": 248.97,
+    "during_tts_camera_fps": 267.81,
+    "fps_drop_percent": -7.57
+  },
+  "resource_footprint": {
+    "baseline_ram_mb": 49.86,
+    "peak_ram_mb": 1019.59,
+    "peak_vram_mb": 0.0
+  }
+}

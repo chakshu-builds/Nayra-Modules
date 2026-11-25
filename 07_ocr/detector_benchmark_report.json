@@ -1,0 +1,301 @@
+{
+  "timestamp": "2026-11-20 01:17:08",
+  "model_path": "models\\ocr\\ch_PP-OCRv4_det.onnx",
+  "model_sha256": "64f2f901ba4ea646f448c7df57f299bdda3e74718a3ef585d65e29eca2b7a1a2",
+  "execution_providers_available": [
+    "TensorrtExecutionProvider",
+    "CUDAExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "cuda_benchmarks": [
+    {
+      "provider": "CUDA",
+      "active_provider": "CUDAExecutionProvider",
+      "resolution": "640x640",
+      "width": 640,
+      "height": 640,
+      "warmup_runs": 10,
+      "timed_runs": 30,
+      "detections_mean": 4.0,
+      "pre_median_ms": 26.13,
+      "pre_p95_ms": 49.2,
+      "infer_median_ms": 22.59,
+      "infer_p95_ms": 39.57,
+      "post_median_ms": 5.64,
+      "post_p95_ms": 12.91,
+      "total_median_ms": 53.71,
+      "total_p95_ms": 89.44,
+      "peak_gpu_vram_mb": 0.0
+    },
+    {
+      "provider": "CUDA",
+      "active_provider": "CUDAExecutionProvider",
+      "resolution": "960x960",
+      "width": 960,
+      "height": 960,
+      "warmup_runs": 10,
+      "timed_runs": 30,
+      "detections_mean": 6.0,
+      "pre_median_ms": 55.89,
+      "pre_p95_ms": 75.89,
+      "infer_median_ms": 33.17,
+      "infer_p95_ms": 49.54,
+      "post_median_ms": 9.01,
+      "post_p95_ms": 14.25,
+      "total_median_ms": 101.69,
+      "total_p95_ms": 130.32,
+      "peak_gpu_vram_mb": 0.0
+    },
+    {
+      "provider": "CUDA",
+      "active_provider": "CUDAExecutionProvider",
+      "resolution": "1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "warmup_runs": 10,
+      "timed_runs": 30,
+      "detections_mean": 6.0,
+      "pre_median_ms": 32.09,
+      "pre_p95_ms": 57.28,
+      "infer_median_ms": 24.4,
+      "infer_p95_ms": 59.69,
+      "post_median_ms": 7.98,
+      "post_p95_ms": 19.96,
+      "total_median_ms": 63.51,
+      "total_p95_ms": 132.58,
+      "peak_gpu_vram_mb": 0.0
+    }
+  ],
+  "cpu_benchmarks": [
+    {
+      "provider": "CPU",
+      "active_provider": "CPUExecutionProvider",
+      "resolution": "640x640",
+      "width": 640,
+      "height": 640,
+      "warmup_runs": 5,
+      "timed_runs": 15,
+      "detections_mean": 4.0,
+      "pre_median_ms": 64.05,
+      "pre_p95_ms": 79.65,
+      "infer_median_ms": 748.23,
+      "infer_p95_ms": 824.45,
+      "post_median_ms": 12.97,
+      "post_p95_ms": 19.32,
+      "total_median_ms": 821.05,
+      "total_p95_ms": 922.19,
+      "peak_gpu_vram_mb": 0.0
+    },
+    {
+      "provider": "CPU",
+      "active_provider": "CPUExecutionProvider",
+      "resolution": "960x960",
+      "width": 960,
+      "height": 960,
+      "warmup_runs": 5,
+      "timed_runs": 15,
+      "detections_mean": 6.0,
+      "pre_median_ms": 126.72,
+      "pre_p95_ms": 140.52,
+      "infer_median_ms": 1420.89,
+      "infer_p95_ms": 1534.04,
+      "post_median_ms": 24.95,
+      "post_p95_ms": 28.47,
+      "total_median_ms": 1570.07,
+      "total_p95_ms": 1692.13,
+      "peak_gpu_vram_mb": 0.0
+    },
+    {
+      "provider": "CPU",
+      "active_provider": "CPUExecutionProvider",
+      "resolution": "1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "warmup_runs": 5,
+      "timed_runs": 15,
+      "detections_mean": 6.0,
+      "pre_median_ms": 82.07,
+      "pre_p95_ms": 139.8,
+      "infer_median_ms": 915.88,
+      "infer_p95_ms": 1103.4,
+      "post_median_ms": 17.75,
+      "post_p95_ms": 40.32,
+      "total_median_ms": 1013.26,
+      "total_p95_ms": 1242.4,
+      "peak_gpu_vram_mb": 0.0
+    }
+  ],
+  "scene_evaluations": [
+    {
+      "scene_name": "single_hindi",
+      "description": "Single Hindi Devanagari text line crop",
+      "image_shape": [
+        200,
+        500
+      ],
+      "expected_min_lines": 1,
+      "detected_lines": 1,
+      "passed": true,
+      "confidences": [
+        0.816
+      ],
+      "boxes_xyxy": [
+        [
+          77.8,
+          83.0,
+          258.1,
+          131.6
+        ]
+      ],
+      "latency_ms": 396.86
+    },
+    {
+      "scene_name": "single_english",
+      "description": "Single English Latin text line crop",
+      "image_shape": [
+        200,
+        500
+      ],
+      "expected_min_lines": 1,
+      "detected_lines": 1,
+      "passed": true,
+      "confidences": [
+        0.955
+      ],
+      "boxes_xyxy": [
+        [
+          76.2,
+          84.4,
+          393.5,
+          112.5
+        ]
+      ],
+      "latency_ms": 39.43
+    },
+    {
+      "scene_name": "mixed_bilingual",
+      "description": "Mixed bilingual document with English header, Hindi body, and English footer",
+      "image_shape": [
+        480,
+        640
+      ],
+      "expected_min_lines": 3,
+      "detected_lines": 3,
+      "passed": true,
+      "confidences": [
+        0.801,
+        0.826,
+        0.89
+      ],
+      "boxes_xyxy": [
+        [
+          86.6,
+          93.3,
+          462.4,
+          123.6
+        ],
+        [
+          86.2,
+          216.4,
+          265.6,
+          258.7
+        ],
+        [
+          86.3,
+          334.3,
+          403.7,
+          363.7
+        ]
+      ],
+      "latency_ms": 194.44
+    },
+    {
+      "scene_name": "dense_multiline",
+      "description": "Dense 5-line mixed receipt / document layout",
+      "image_shape": [
+        720,
+        960
+      ],
+      "expected_min_lines": 5,
+      "detected_lines": 6,
+      "passed": true,
+      "confidences": [
+        0.748,
+        0.736,
+        0.823,
+        0.887,
+        0.871,
+        0.861
+      ],
+      "boxes_xyxy": [
+        [
+          108.7,
+          73.7,
+          540.3,
+          108.8
+        ],
+        [
+          111.2,
+          179.7,
+          203.6,
+          220.0
+        ],
+        [
+          198.2,
+          183.3,
+          412.8,
+          217.6
+        ],
+        [
+          106.3,
+          274.4,
+          423.7,
+          304.4
+        ],
+        [
+          108.3,
+          373.5,
+          287.6,
+          420.0
+        ],
+        [
+          105.7,
+          473.0,
+          484.3,
+          506.5
+        ]
+      ],
+      "latency_ms": 127.54
+    },
+    {
+      "scene_name": "nearby_lines",
+      "description": "Two nearby lines with tight vertical gap (15px gap)",
+      "image_shape": [
+        300,
+        600
+      ],
+      "expected_min_lines": 2,
+      "detected_lines": 2,
+      "passed": true,
+      "confidences": [
+        0.822,
+        0.821
+      ],
+      "boxes_xyxy": [
+        [
+          67.1,
+          63.6,
+          381.9,
+          91.6
+        ],
+        [
+          67.1,
+          130.2,
+          445.1,
+          158.3
+        ]
+      ],
+      "latency_ms": 132.11
+    }
+  ]
+}

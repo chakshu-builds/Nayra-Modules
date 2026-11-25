@@ -1,0 +1,22 @@
+"""NAYRA — Public Camera Manager Module Entrypoint."""
+
+from __future__ import annotations
+
+import importlib
+import sys
+from pathlib import Path
+
+_module_dir = Path(__file__).resolve().parent / "02_camera_manager"
+__path__ = [str(_module_dir)]
+
+if str(_module_dir) not in sys.path:
+    sys.path.insert(0, str(_module_dir))
+
+_pkg = importlib.import_module("02_camera_manager")
+
+if "camera_manager" not in sys.modules:
+    sys.modules["camera_manager"] = sys.modules[__name__]
+
+for attr in dir(_pkg):
+    if not attr.startswith("_"):
+        globals()[attr] = getattr(_pkg, attr)

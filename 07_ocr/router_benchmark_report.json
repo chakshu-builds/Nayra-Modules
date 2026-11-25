@@ -1,0 +1,672 @@
+{
+  "metadata": {
+    "evaluation_title": "NAYRA Module 07 Script Router Benchmark",
+    "timestamp": "2026-11-20 01:18:09",
+    "disclaimer": "PRELIMINARY RESULTS: The evaluated benchmark contains 10 Hindi and 15 English samples. These figures are preliminary metrics on available development crops and are not representative of diverse real-world open-world conditions."
+  },
+  "benchmark_metrics": {
+    "total_benchmark_samples": 25,
+    "correct_classifications": 25,
+    "incorrect_classifications": 0,
+    "routing_accuracy": 1.0,
+    "confusion_matrix": {
+      "DEVANAGARI": {
+        "DEVANAGARI": 10,
+        "LATIN": 0,
+        "SHARED_NUMERIC": 0,
+        "UNKNOWN": 0
+      },
+      "LATIN": {
+        "DEVANAGARI": 0,
+        "LATIN": 15,
+        "SHARED_NUMERIC": 0,
+        "UNKNOWN": 0
+      },
+      "SHARED_NUMERIC": {
+        "DEVANAGARI": 0,
+        "LATIN": 0,
+        "SHARED_NUMERIC": 0,
+        "UNKNOWN": 0
+      },
+      "UNKNOWN": {
+        "DEVANAGARI": 0,
+        "LATIN": 0,
+        "SHARED_NUMERIC": 0,
+        "UNKNOWN": 0
+      }
+    },
+    "per_class_metrics": {
+      "DEVANAGARI": {
+        "true_positive": 10,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      },
+      "LATIN": {
+        "true_positive": 15,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      }
+    },
+    "decision_distribution": {
+      "DEVANAGARI": 10,
+      "LATIN": 15,
+      "SHARED_NUMERIC": 0,
+      "UNKNOWN": 0
+    },
+    "latency_ms": {
+      "overall_median_ms": 0.99,
+      "overall_p95_ms": 1.387
+    }
+  },
+  "robustness_test_suite": {
+    "total_robustness_cases": 8,
+    "passed_cases": 8,
+    "cases": [
+      {
+        "case_id": "rob_numeric_pure",
+        "description": "Pure numeric string '12345'",
+        "expected_behavior": "SHARED_NUMERIC",
+        "actual_decision": "SHARED_NUMERIC",
+        "confidence": 0.9,
+        "passed": true,
+        "reason": "Isolated digit/symbol glyphs detected (n=5, max_ar=0.69, no lowercase or wide letters)"
+      },
+      {
+        "case_id": "rob_numeric_symbols",
+        "description": "Phone number with symbols '+1 (800) 555-0199'",
+        "expected_behavior": "SHARED_NUMERIC or LATIN with symbols",
+        "actual_decision": "LATIN",
+        "confidence": 0.95,
+        "passed": true,
+        "reason": "Latin alphabetic structure detected (lowercase=False, wide_caps=False, words=3)"
+      },
+      {
+        "case_id": "rob_empty_array",
+        "description": "Empty 0x0 image crop",
+        "expected_behavior": "UNKNOWN (conf=0.0)",
+        "actual_decision": "UNKNOWN",
+        "confidence": 0.0,
+        "passed": true,
+        "reason": "Invalid or empty image array"
+      },
+      {
+        "case_id": "rob_flat_image",
+        "description": "Flat solid gray image (std=0)",
+        "expected_behavior": "UNKNOWN (conf=0.0)",
+        "actual_decision": "UNKNOWN",
+        "confidence": 0.0,
+        "passed": true,
+        "reason": "Low contrast or flat image (std=0.00 < 6.0)"
+      },
+      {
+        "case_id": "rob_tiny_crop",
+        "description": "Sub-threshold tiny crop (5x5 px)",
+        "expected_behavior": "UNKNOWN (conf=0.0)",
+        "actual_decision": "UNKNOWN",
+        "confidence": 0.0,
+        "passed": true,
+        "reason": "Crop dimensions (5x5) below minimum threshold"
+      },
+      {
+        "case_id": "rob_blurred_crop",
+        "description": "Heavily Gaussian-blurred text",
+        "expected_behavior": "UNKNOWN",
+        "actual_decision": "UNKNOWN",
+        "confidence": 0.0,
+        "passed": true,
+        "reason": "Severe image blur (Laplacian variance 2.99 < 4.0)"
+      },
+      {
+        "case_id": "rob_horizontal_rule",
+        "description": "Solid horizontal line / separator rule",
+        "expected_behavior": "UNKNOWN (rejected as non-text)",
+        "actual_decision": "UNKNOWN",
+        "confidence": 0.0,
+        "passed": true,
+        "reason": "Rejected by visual pre-filter: Foreground text box (120x2) below minimum"
+      },
+      {
+        "case_id": "rob_ambiguous_single_glyph",
+        "description": "Single isolated glyph '1'",
+        "expected_behavior": "UNKNOWN (conservative fallback)",
+        "actual_decision": "UNKNOWN",
+        "confidence": 0.4,
+        "passed": true,
+        "reason": "Single isolated glyph (ambiguous between Latin letter and digit)"
+      }
+    ]
+  },
+  "benchmark_sample_details": [
+    {
+      "id": "sample_01",
+      "category": "Basic greeting & common conjunct (स्त)",
+      "ground_truth": "नमस्ते भारत",
+      "image_path": "07_ocr/data/poc/sample_01.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.8889,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=2.13, coverage=0.84, mass=0.26)",
+      "latency_median_ms": 0.489,
+      "diagnostics": {
+        "shirorekha_run_ratio": 2.133,
+        "shirorekha_coverage": 0.84,
+        "shirorekha_mass": 0.255,
+        "laplacian_variance": 6088.79
+      }
+    },
+    {
+      "id": "sample_02",
+      "category": "Double consonants & conjuncts (ल्ल, श्व, द्य)",
+      "ground_truth": "दिल्ली विश्वविद्यालय",
+      "image_path": "07_ocr/data/poc/sample_02.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.9765,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=4.61, coverage=0.97, mass=0.20)",
+      "latency_median_ms": 0.725,
+      "diagnostics": {
+        "shirorekha_run_ratio": 4.609,
+        "shirorekha_coverage": 0.975,
+        "shirorekha_mass": 0.197,
+        "laplacian_variance": 7390.64
+      }
+    },
+    {
+      "id": "sample_03",
+      "category": "Public signage & conjunct (स्पताल, आपातकालीन)",
+      "ground_truth": "अस्पताल एवं आपातकालीन सेवा",
+      "image_path": "07_ocr/data/poc/sample_03.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.99,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=3.61, coverage=0.84, mass=0.23)",
+      "latency_median_ms": 0.99,
+      "diagnostics": {
+        "shirorekha_run_ratio": 3.609,
+        "shirorekha_coverage": 0.838,
+        "shirorekha_mass": 0.227,
+        "laplacian_variance": 6621.49
+      }
+    },
+    {
+      "id": "sample_04",
+      "category": "Punctuation (danda ।) & nasalization (ँ, ं)",
+      "ground_truth": "कृपया यहाँ कूड़ा न फेंकें।",
+      "image_path": "07_ocr/data/poc/sample_04.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.8383,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=1.83, coverage=0.88, mass=0.23)",
+      "latency_median_ms": 0.817,
+      "diagnostics": {
+        "shirorekha_run_ratio": 1.83,
+        "shirorekha_coverage": 0.876,
+        "shirorekha_mass": 0.229,
+        "laplacian_variance": 6557.88
+      }
+    },
+    {
+      "id": "sample_05",
+      "category": "Official signage & pipe separator (|)",
+      "ground_truth": "भारत सरकार | गृह मंत्रालय",
+      "image_path": "07_ocr/data/poc/sample_05.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.99,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=2.86, coverage=0.84, mass=0.25)",
+      "latency_median_ms": 0.876,
+      "diagnostics": {
+        "shirorekha_run_ratio": 2.86,
+        "shirorekha_coverage": 0.838,
+        "shirorekha_mass": 0.252,
+        "laplacian_variance": 6504.42
+      }
+    },
+    {
+      "id": "sample_06",
+      "category": "Devanagari numerals (२५, २०२६) & colon (:)",
+      "ground_truth": "दिनांक: २५ अगस्त २०२६",
+      "image_path": "07_ocr/data/poc/sample_06.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.7181,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=2.06, coverage=0.49, mass=0.16)",
+      "latency_median_ms": 0.792,
+      "diagnostics": {
+        "shirorekha_run_ratio": 2.065,
+        "shirorekha_coverage": 0.489,
+        "shirorekha_mass": 0.159,
+        "laplacian_variance": 5601.86
+      }
+    },
+    {
+      "id": "sample_07",
+      "category": "Devanagari numerals, currency & conjunct (प्रति, व्यक्ति)",
+      "ground_truth": "शुल्क: रु ५०० प्रति व्यक्ति",
+      "image_path": "07_ocr/data/poc/sample_07.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.8783,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=2.33, coverage=0.71, mass=0.19)",
+      "latency_median_ms": 0.894,
+      "diagnostics": {
+        "shirorekha_run_ratio": 2.326,
+        "shirorekha_coverage": 0.707,
+        "shirorekha_mass": 0.193,
+        "laplacian_variance": 6436.2
+      }
+    },
+    {
+      "id": "sample_08",
+      "category": "Arabic digits (100%), Latin punctuation, complex conjuncts",
+      "ground_truth": "सुरक्षा नियम 100% अनिवार्य",
+      "image_path": "07_ocr/data/poc/sample_08.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.8608,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=2.35, coverage=0.68, mass=0.18)",
+      "latency_median_ms": 0.967,
+      "diagnostics": {
+        "shirorekha_run_ratio": 2.348,
+        "shirorekha_coverage": 0.683,
+        "shirorekha_mass": 0.181,
+        "laplacian_variance": 6462.64
+      }
+    },
+    {
+      "id": "sample_09",
+      "category": "Nuqta loan consonant (ज़) & conjuncts (प्रशासन, कार्यालय)",
+      "ground_truth": "ज़िला प्रशासन कार्यालय",
+      "image_path": "07_ocr/data/poc/sample_09.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.99,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=3.02, coverage=0.95, mass=0.24)",
+      "latency_median_ms": 0.793,
+      "diagnostics": {
+        "shirorekha_run_ratio": 3.022,
+        "shirorekha_coverage": 0.955,
+        "shirorekha_mass": 0.241,
+        "laplacian_variance": 6641.46
+      }
+    },
+    {
+      "id": "sample_10",
+      "category": "Transit signage, Arabic digits (12345), danda (।)",
+      "ground_truth": "ट्रेन संख्या 12345 समय पर है।",
+      "image_path": "07_ocr/data/poc/sample_10.png",
+      "expected_script": "DEVANAGARI",
+      "predicted_script": "DEVANAGARI",
+      "confidence": 0.8025,
+      "is_correct": true,
+      "decision_reason": "Devanagari headline detected (run_ratio=1.94, coverage=0.66, mass=0.20)",
+      "latency_median_ms": 0.971,
+      "diagnostics": {
+        "shirorekha_run_ratio": 1.935,
+        "shirorekha_coverage": 0.663,
+        "shirorekha_mass": 0.199,
+        "laplacian_variance": 6266.12
+      }
+    },
+    {
+      "id": "sample_en_01",
+      "category": "Uppercase public signage",
+      "ground_truth": "EMERGENCY EXIT",
+      "image_path": "07_ocr/data/poc_en/sample_en_01.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=False, wide_caps=True, words=2)",
+      "latency_median_ms": 0.928,
+      "diagnostics": {
+        "text_h": 26,
+        "text_w": 318,
+        "glyph_count": 13,
+        "lowercase_glyph_count": 0,
+        "word_spaces_count": 1,
+        "main_cap_glyph_count": 13,
+        "max_aspect_ratio": 0.92,
+        "laplacian_variance": 7491.74,
+        "shirorekha_confidence": 0.285
+      }
+    },
+    {
+      "id": "sample_en_02",
+      "category": "Title case brand & assistive system",
+      "ground_truth": "NAYRA Assistive Vision",
+      "image_path": "07_ocr/data/poc_en/sample_en_02.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=2)",
+      "latency_median_ms": 1.089,
+      "diagnostics": {
+        "text_h": 26,
+        "text_w": 379,
+        "glyph_count": 24,
+        "lowercase_glyph_count": 12,
+        "word_spaces_count": 1,
+        "main_cap_glyph_count": 20,
+        "max_aspect_ratio": 0.95,
+        "laplacian_variance": 6452.92,
+        "shirorekha_confidence": 0.2378
+      }
+    },
+    {
+      "id": "sample_en_03",
+      "category": "Lowercase sentence with period",
+      "ground_truth": "please keep this area clear.",
+      "image_path": "07_ocr/data/poc_en/sample_en_03.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=False, words=1)",
+      "latency_median_ms": 1.32,
+      "diagnostics": {
+        "text_h": 33,
+        "text_w": 435,
+        "glyph_count": 25,
+        "lowercase_glyph_count": 16,
+        "word_spaces_count": 0,
+        "main_cap_glyph_count": 7,
+        "max_aspect_ratio": 0.65,
+        "laplacian_variance": 5538.01,
+        "shirorekha_confidence": 0.2804
+      }
+    },
+    {
+      "id": "sample_en_04",
+      "category": "Alphanumeric transit gate & terminal",
+      "ground_truth": "Gate 4B - Terminal 2",
+      "image_path": "07_ocr/data/poc_en/sample_en_04.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=4)",
+      "latency_median_ms": 0.935,
+      "diagnostics": {
+        "text_h": 26,
+        "text_w": 330,
+        "glyph_count": 16,
+        "lowercase_glyph_count": 8,
+        "word_spaces_count": 3,
+        "main_cap_glyph_count": 15,
+        "max_aspect_ratio": 1.37,
+        "laplacian_variance": 5807.68,
+        "shirorekha_confidence": 0.2717
+      }
+    },
+    {
+      "id": "sample_en_05",
+      "category": "Train & platform signage with digits",
+      "ground_truth": "Train 1240 to Central Station",
+      "image_path": "07_ocr/data/poc_en/sample_en_05.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=5)",
+      "latency_median_ms": 1.161,
+      "diagnostics": {
+        "text_h": 26,
+        "text_w": 457,
+        "glyph_count": 27,
+        "lowercase_glyph_count": 13,
+        "word_spaces_count": 4,
+        "main_cap_glyph_count": 25,
+        "max_aspect_ratio": 0.95,
+        "laplacian_variance": 6050.39,
+        "shirorekha_confidence": 0.2518
+      }
+    },
+    {
+      "id": "sample_en_06",
+      "category": "Currency symbol, price & parentheses",
+      "ground_truth": "Total: $49.99 (Tax Incl.)",
+      "image_path": "07_ocr/data/poc_en/sample_en_06.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=False, words=4)",
+      "latency_median_ms": 1.15,
+      "diagnostics": {
+        "text_h": 35,
+        "text_w": 378,
+        "glyph_count": 23,
+        "lowercase_glyph_count": 6,
+        "word_spaces_count": 3,
+        "main_cap_glyph_count": 13,
+        "max_aspect_ratio": 0.77,
+        "laplacian_variance": 5444.39,
+        "shirorekha_confidence": 0.1306
+      }
+    },
+    {
+      "id": "sample_en_07",
+      "category": "Safety warning with colon and exclamation",
+      "ground_truth": "WARNING: High Voltage!",
+      "image_path": "07_ocr/data/poc_en/sample_en_07.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=2)",
+      "latency_median_ms": 1.172,
+      "diagnostics": {
+        "text_h": 33,
+        "text_w": 406,
+        "glyph_count": 23,
+        "lowercase_glyph_count": 4,
+        "word_spaces_count": 1,
+        "main_cap_glyph_count": 14,
+        "max_aspect_ratio": 1.23,
+        "laplacian_variance": 6080.06,
+        "shirorekha_confidence": 0.1603
+      }
+    },
+    {
+      "id": "sample_en_08",
+      "category": "Hyphenated technical product identifier",
+      "ground_truth": "Model: NYR-8000-PRO",
+      "image_path": "07_ocr/data/poc_en/sample_en_08.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=4)",
+      "latency_median_ms": 0.939,
+      "diagnostics": {
+        "text_h": 26,
+        "text_w": 371,
+        "glyph_count": 17,
+        "lowercase_glyph_count": 2,
+        "word_spaces_count": 3,
+        "main_cap_glyph_count": 15,
+        "max_aspect_ratio": 0.95,
+        "laplacian_variance": 6785.42,
+        "shirorekha_confidence": 0.2036
+      }
+    },
+    {
+      "id": "sample_en_09",
+      "category": "Room directory & professional title",
+      "ground_truth": "Room 402: Chief Medical Officer",
+      "image_path": "07_ocr/data/poc_en/sample_en_09.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=5)",
+      "latency_median_ms": 1.22,
+      "diagnostics": {
+        "text_h": 26,
+        "text_w": 517,
+        "glyph_count": 30,
+        "lowercase_glyph_count": 13,
+        "word_spaces_count": 4,
+        "main_cap_glyph_count": 25,
+        "max_aspect_ratio": 1.37,
+        "laplacian_variance": 6454.29,
+        "shirorekha_confidence": 0.3446
+      }
+    },
+    {
+      "id": "sample_en_10",
+      "category": "Email, URL and pipe delimiter",
+      "ground_truth": "contact@nayra.org | www.nayra.ai",
+      "image_path": "07_ocr/data/poc_en/sample_en_10.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=2)",
+      "latency_median_ms": 1.482,
+      "diagnostics": {
+        "text_h": 33,
+        "text_w": 547,
+        "glyph_count": 29,
+        "lowercase_glyph_count": 18,
+        "word_spaces_count": 1,
+        "main_cap_glyph_count": 7,
+        "max_aspect_ratio": 1.0,
+        "laplacian_variance": 5871.71,
+        "shirorekha_confidence": 0.2144
+      }
+    },
+    {
+      "id": "sample_en_11",
+      "category": "Date, timestamp & hyphens",
+      "ground_truth": "Date: 25-Aug-2026 14:30",
+      "image_path": "07_ocr/data/poc_en/sample_en_11.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=4)",
+      "latency_median_ms": 1.147,
+      "diagnostics": {
+        "text_h": 33,
+        "text_w": 399,
+        "glyph_count": 21,
+        "lowercase_glyph_count": 3,
+        "word_spaces_count": 3,
+        "main_cap_glyph_count": 14,
+        "max_aspect_ratio": 0.92,
+        "laplacian_variance": 6159.09,
+        "shirorekha_confidence": 0.1264
+      }
+    },
+    {
+      "id": "sample_en_12",
+      "category": "Door instructions & forward slash",
+      "ground_truth": "Push to Open / Pull to Close",
+      "image_path": "07_ocr/data/poc_en/sample_en_12.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=1)",
+      "latency_median_ms": 1.279,
+      "diagnostics": {
+        "text_h": 33,
+        "text_w": 448,
+        "glyph_count": 22,
+        "lowercase_glyph_count": 10,
+        "word_spaces_count": 0,
+        "main_cap_glyph_count": 12,
+        "max_aspect_ratio": 0.92,
+        "laplacian_variance": 4946.47,
+        "shirorekha_confidence": 0.1372
+      }
+    },
+    {
+      "id": "sample_en_13",
+      "category": "Phone number, plus sign & parentheses",
+      "ground_truth": "Call Support: +1 (800) 555-0199",
+      "image_path": "07_ocr/data/poc_en/sample_en_13.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=5)",
+      "latency_median_ms": 1.404,
+      "diagnostics": {
+        "text_h": 33,
+        "text_w": 511,
+        "glyph_count": 26,
+        "lowercase_glyph_count": 4,
+        "word_spaces_count": 4,
+        "main_cap_glyph_count": 20,
+        "max_aspect_ratio": 0.85,
+        "laplacian_variance": 5785.78,
+        "shirorekha_confidence": 0.1047
+      }
+    },
+    {
+      "id": "sample_en_14",
+      "category": "Percentage symbol & audit statement",
+      "ground_truth": "Safety Compliance 100%",
+      "image_path": "07_ocr/data/poc_en/sample_en_14.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=True, words=2)",
+      "latency_median_ms": 1.192,
+      "diagnostics": {
+        "text_h": 33,
+        "text_w": 400,
+        "glyph_count": 23,
+        "lowercase_glyph_count": 10,
+        "word_spaces_count": 1,
+        "main_cap_glyph_count": 11,
+        "max_aspect_ratio": 0.85,
+        "laplacian_variance": 5692.7,
+        "shirorekha_confidence": 0.1607
+      }
+    },
+    {
+      "id": "sample_en_15",
+      "category": "Street address with comma & numerals",
+      "ground_truth": "221B Baker Street, London",
+      "image_path": "07_ocr/data/poc_en/sample_en_15.png",
+      "expected_script": "LATIN",
+      "predicted_script": "LATIN",
+      "confidence": 0.95,
+      "is_correct": true,
+      "decision_reason": "Latin alphabetic structure detected (lowercase=True, wide_caps=False, words=3)",
+      "latency_median_ms": 1.184,
+      "diagnostics": {
+        "text_h": 31,
+        "text_w": 431,
+        "glyph_count": 22,
+        "lowercase_glyph_count": 10,
+        "word_spaces_count": 2,
+        "main_cap_glyph_count": 11,
+        "max_aspect_ratio": 0.77,
+        "laplacian_variance": 6023.91,
+        "shirorekha_confidence": 0.2295
+      }
+    }
+  ]
+}

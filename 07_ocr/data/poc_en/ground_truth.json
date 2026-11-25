@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sample_en_01",
+    "category": "Uppercase public signage",
+    "ground_truth": "EMERGENCY EXIT",
+    "image_path": "07_ocr/data/poc_en/sample_en_01.png",
+    "width": 370,
+    "height": 58
+  },
+  {
+    "id": "sample_en_02",
+    "category": "Title case brand & assistive system",
+    "ground_truth": "NAYRA Assistive Vision",
+    "image_path": "07_ocr/data/poc_en/sample_en_02.png",
+    "width": 432,
+    "height": 58
+  },
+  {
+    "id": "sample_en_03",
+    "category": "Lowercase sentence with period",
+    "ground_truth": "please keep this area clear.",
+    "image_path": "07_ocr/data/poc_en/sample_en_03.png",
+    "width": 488,
+    "height": 65
+  },
+  {
+    "id": "sample_en_04",
+    "category": "Alphanumeric transit gate & terminal",
+    "ground_truth": "Gate 4B - Terminal 2",
+    "image_path": "07_ocr/data/poc_en/sample_en_04.png",
+    "width": 382,
+    "height": 58
+  },
+  {
+    "id": "sample_en_05",
+    "category": "Train & platform signage with digits",
+    "ground_truth": "Train 1240 to Central Station",
+    "image_path": "07_ocr/data/poc_en/sample_en_05.png",
+    "width": 508,
+    "height": 58
+  },
+  {
+    "id": "sample_en_06",
+    "category": "Currency symbol, price & parentheses",
+    "ground_truth": "Total: $49.99 (Tax Incl.)",
+    "image_path": "07_ocr/data/poc_en/sample_en_06.png",
+    "width": 428,
+    "height": 67
+  },
+  {
+    "id": "sample_en_07",
+    "category": "Safety warning with colon and exclamation",
+    "ground_truth": "WARNING: High Voltage!",
+    "image_path": "07_ocr/data/poc_en/sample_en_07.png",
+    "width": 458,
+    "height": 65
+  },
+  {
+    "id": "sample_en_08",
+    "category": "Hyphenated technical product identifier",
+    "ground_truth": "Model: NYR-8000-PRO",
+    "image_path": "07_ocr/data/poc_en/sample_en_08.png",
+    "width": 424,
+    "height": 58
+  },
+  {
+    "id": "sample_en_09",
+    "category": "Room directory & professional title",
+    "ground_truth": "Room 402: Chief Medical Officer",
+    "image_path": "07_ocr/data/poc_en/sample_en_09.png",
+    "width": 569,
+    "height": 58
+  },
+  {
+    "id": "sample_en_10",
+    "category": "Email, URL and pipe delimiter",
+    "ground_truth": "contact@nayra.org | www.nayra.ai",
+    "image_path": "07_ocr/data/poc_en/sample_en_10.png",
+    "width": 598,
+    "height": 65
+  },
+  {
+    "id": "sample_en_11",
+    "category": "Date, timestamp & hyphens",
+    "ground_truth": "Date: 25-Aug-2026 14:30",
+    "image_path": "07_ocr/data/poc_en/sample_en_11.png",
+    "width": 452,
+    "height": 65
+  },
+  {
+    "id": "sample_en_12",
+    "category": "Door instructions & forward slash",
+    "ground_truth": "Push to Open / Pull to Close",
+    "image_path": "07_ocr/data/poc_en/sample_en_12.png",
+    "width": 500,
+    "height": 65
+  },
+  {
+    "id": "sample_en_13",
+    "category": "Phone number, plus sign & parentheses",
+    "ground_truth": "Call Support: +1 (800) 555-0199",
+    "image_path": "07_ocr/data/poc_en/sample_en_13.png",
+    "width": 563,
+    "height": 65
+  },
+  {
+    "id": "sample_en_14",
+    "category": "Percentage symbol & audit statement",
+    "ground_truth": "Safety Compliance 100%",
+    "image_path": "07_ocr/data/poc_en/sample_en_14.png",
+    "width": 452,
+    "height": 65
+  },
+  {
+    "id": "sample_en_15",
+    "category": "Street address with comma & numerals",
+    "ground_truth": "221B Baker Street, London",
+    "image_path": "07_ocr/data/poc_en/sample_en_15.png",
+    "width": 482,
+    "height": 63
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sample_01",
+    "category": "Basic greeting & common conjunct (स्त)",
+    "ground_truth": "नमस्ते भारत",
+    "image_path": "07_ocr/data/poc/sample_01.png",
+    "width": 229,
+    "height": 77
+  },
+  {
+    "id": "sample_02",
+    "category": "Double consonants & conjuncts (ल्ल, श्व, द्य)",
+    "ground_truth": "दिल्ली विश्वविद्यालय",
+    "image_path": "07_ocr/data/poc/sample_02.png",
+    "width": 363,
+    "height": 78
+  },
+  {
+    "id": "sample_03",
+    "category": "Public signage & conjunct (स्पताल, आपातकालीन)",
+    "ground_truth": "अस्पताल एवं आपातकालीन सेवा",
+    "image_path": "07_ocr/data/poc/sample_03.png",
+    "width": 501,
+    "height": 78
+  },
+  {
+    "id": "sample_04",
+    "category": "Punctuation (danda ।) & nasalization (ँ, ं)",
+    "ground_truth": "कृपया यहाँ कूड़ा न फेंकें।",
+    "image_path": "07_ocr/data/poc/sample_04.png",
+    "width": 393,
+    "height": 79
+  },
+  {
+    "id": "sample_05",
+    "category": "Official signage & pipe separator (|)",
+    "ground_truth": "भारत सरकार | गृह मंत्रालय",
+    "image_path": "07_ocr/data/poc/sample_05.png",
+    "width": 441,
+    "height": 75
+  },
+  {
+    "id": "sample_06",
+    "category": "Devanagari numerals (२५, २०२६) & colon (:)",
+    "ground_truth": "दिनांक: २५ अगस्त २०२६",
+    "image_path": "07_ocr/data/poc/sample_06.png",
+    "width": 403,
+    "height": 78
+  },
+  {
+    "id": "sample_07",
+    "category": "Devanagari numerals, currency & conjunct (प्रति, व्यक्ति)",
+    "ground_truth": "शुल्क: रु ५०० प्रति व्यक्ति",
+    "image_path": "07_ocr/data/poc/sample_07.png",
+    "width": 455,
+    "height": 78
+  },
+  {
+    "id": "sample_08",
+    "category": "Arabic digits (100%), Latin punctuation, complex conjuncts",
+    "ground_truth": "सुरक्षा नियम 100% अनिवार्य",
+    "image_path": "07_ocr/data/poc/sample_08.png",
+    "width": 481,
+    "height": 78
+  },
+  {
+    "id": "sample_09",
+    "category": "Nuqta loan consonant (ज़) & conjuncts (प्रशासन, कार्यालय)",
+    "ground_truth": "ज़िला प्रशासन कार्यालय",
+    "image_path": "07_ocr/data/poc/sample_09.png",
+    "width": 404,
+    "height": 78
+  },
+  {
+    "id": "sample_10",
+    "category": "Transit signage, Arabic digits (12345), danda (।)",
+    "ground_truth": "ट्रेन संख्या 12345 समय पर है।",
+    "image_path": "07_ocr/data/poc/sample_10.png",
+    "width": 492,
+    "height": 78
+  }
+]

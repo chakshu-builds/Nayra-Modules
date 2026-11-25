@@ -1,0 +1,1472 @@
+{
+  "metadata": {
+    "evaluation_standard": "Step 3.6.2 Final Reconciled Evaluation",
+    "date": "2026-11-20 10:32:45",
+    "matching_algorithm": "Hungarian Bipartite Assignment (linear_sum_assignment)",
+    "normalization": "Unicode NFC",
+    "additivity_verified": true
+  },
+  "ground_truth_inventory": {
+    "total_lines": 64,
+    "devanagari_lines": 21,
+    "latin_lines": 43,
+    "total_characters": 817,
+    "devanagari_characters": 150,
+    "latin_characters": 667,
+    "total_words": 139,
+    "devanagari_words": 27,
+    "latin_words": 112
+  },
+  "error_counters": {
+    "total_char_edits": 33,
+    "devanagari_char_edits": 12,
+    "latin_char_edits": 21,
+    "total_word_edits": 17,
+    "devanagari_word_edits": 6,
+    "latin_word_edits": 11,
+    "exact_matches": 49,
+    "matched_lines_tp": 61,
+    "missed_lines_fn": 3
+  },
+  "reconciled_metrics": {
+    "cer_overall": 0.0404,
+    "cer_devanagari": 0.08,
+    "cer_latin": 0.0315,
+    "wer_overall": 0.1223,
+    "wer_devanagari": 0.2222,
+    "wer_latin": 0.0982,
+    "exact_match_rate": 0.7656,
+    "detection_recall": 0.9531,
+    "annotated_precision_all_detections": 0.5922,
+    "annotated_precision_recognized_only": 0.6854,
+    "text_detection_precision_real_scene": 0.8641,
+    "f1_annotated_all": 0.7305,
+    "f1_annotated_rec": 0.7974,
+    "f1_text_detection": 0.9064,
+    "recognition_success_rate": 0.8641
+  },
+  "detection_inventory": {
+    "total_detected_regions": 103,
+    "total_recognized_regions": 89,
+    "total_unresolved_scripts": 14,
+    "matched_annotated_tp": 61,
+    "unannotated_valid_text": 26,
+    "fragmented_detections": 2,
+    "nontext_artifacts_fp": 0
+  },
+  "per_sample_details": [
+    {
+      "image": "real_01_metro_mixed.jpg",
+      "resolution": [
+        1908,
+        1623
+      ],
+      "conditions": [
+        "mixed_hindi_english",
+        "indoor_fluorescent",
+        "medium_distance",
+        "signage"
+      ],
+      "detected_count": 10,
+      "recognized_count": 9,
+      "unresolved_count": 1,
+      "latency_ms": 812.59,
+      "line_evaluations": [
+        {
+          "sample_image": "real_01_metro_mixed.jpg",
+          "line_index": 0,
+          "gt_text": "राजीव",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 5,
+          "gt_word_count": 1,
+          "matched_pred": "राजीव",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_01_metro_mixed.jpg",
+          "line_index": 1,
+          "gt_text": "चौक",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 3,
+          "gt_word_count": 1,
+          "matched_pred": "",
+          "detected": false,
+          "exact_match": false,
+          "char_edits": 3,
+          "cer": 1.0,
+          "word_edits": 1,
+          "wer": 1.0
+        },
+        {
+          "sample_image": "real_01_metro_mixed.jpg",
+          "line_index": 2,
+          "gt_text": "बाराखम्बा",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 9,
+          "gt_word_count": 1,
+          "matched_pred": "बाराखम्बा",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_01_metro_mixed.jpg",
+          "line_index": 3,
+          "gt_text": "रोड",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 3,
+          "gt_word_count": 1,
+          "matched_pred": "रोड",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_01_metro_mixed.jpg",
+          "line_index": 4,
+          "gt_text": "मण्डी",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 5,
+          "gt_word_count": 1,
+          "matched_pred": "मण्डी",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_01_metro_mixed.jpg",
+          "line_index": 5,
+          "gt_text": "हाऊस",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 4,
+          "gt_word_count": 1,
+          "matched_pred": "हाऊस",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_01_metro_mixed.jpg",
+          "line_index": 6,
+          "gt_text": "RajivChowk",
+          "gt_script": "LATIN",
+          "gt_char_count": 10,
+          "gt_word_count": 1,
+          "matched_pred": "RajivChowk",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_01_metro_mixed.jpg",
+          "line_index": 7,
+          "gt_text": "Barakhamba Road",
+          "gt_script": "LATIN",
+          "gt_char_count": 15,
+          "gt_word_count": 2,
+          "matched_pred": "Barakhamba Road",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_01_metro_mixed.jpg",
+          "line_index": 8,
+          "gt_text": "MandiHouse",
+          "gt_script": "LATIN",
+          "gt_char_count": 10,
+          "gt_word_count": 1,
+          "matched_pred": "MandiHouse",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 2,
+          "text": "2c",
+          "confidence": 0.2777,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_02_railway_en.jpg",
+      "resolution": [
+        1920,
+        1264
+      ],
+      "conditions": [
+        "english_printed",
+        "outdoor_daylight",
+        "medium_distance",
+        "railway_signage",
+        "numeric_values"
+      ],
+      "detected_count": 6,
+      "recognized_count": 6,
+      "unresolved_count": 0,
+      "latency_ms": 415.81,
+      "line_evaluations": [
+        {
+          "sample_image": "real_02_railway_en.jpg",
+          "line_index": 0,
+          "gt_text": "NEW DELHI",
+          "gt_script": "LATIN",
+          "gt_char_count": 9,
+          "gt_word_count": 2,
+          "matched_pred": "NEW DELHIC",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.1111,
+          "word_edits": 1,
+          "wer": 0.5
+        },
+        {
+          "sample_image": "real_02_railway_en.jpg",
+          "line_index": 1,
+          "gt_text": "MEAN SEA LEVEL 214-42",
+          "gt_script": "LATIN",
+          "gt_char_count": 21,
+          "gt_word_count": 4,
+          "matched_pred": "MEAN SEA LEVEL 214-4",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.0476,
+          "word_edits": 1,
+          "wer": 0.25
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 0,
+          "text": "T$feci",
+          "confidence": 0.4305,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 2,
+          "text": "W Ge S",
+          "confidence": 0.4416,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 4,
+          "text": "0",
+          "confidence": 0.7456,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 5,
+          "text": "CETTEMT",
+          "confidence": 0.6428,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_03_airport_sign.jpg",
+      "resolution": [
+        1920,
+        908
+      ],
+      "conditions": [
+        "mixed_hindi_english",
+        "indoor_fluorescent",
+        "medium_distance",
+        "airport_signage"
+      ],
+      "detected_count": 5,
+      "recognized_count": 5,
+      "unresolved_count": 0,
+      "latency_ms": 412.98,
+      "line_evaluations": [
+        {
+          "sample_image": "real_03_airport_sign.jpg",
+          "line_index": 0,
+          "gt_text": "FREE WI-FI ZONE",
+          "gt_script": "LATIN",
+          "gt_char_count": 15,
+          "gt_word_count": 3,
+          "matched_pred": "FREE WI-FI ZONE",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_03_airport_sign.jpg",
+          "line_index": 1,
+          "gt_text": "भारतीय विमानपत्तन प्राधिकरण",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 27,
+          "gt_word_count": 3,
+          "matched_pred": "भारतीय विमानपत्तन प्रधिकरण",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.037,
+          "word_edits": 1,
+          "wer": 0.3333
+        },
+        {
+          "sample_image": "real_03_airport_sign.jpg",
+          "line_index": 2,
+          "gt_text": "AIRPORTS AUTHORITY OF INDIA",
+          "gt_script": "LATIN",
+          "gt_char_count": 27,
+          "gt_word_count": 4,
+          "matched_pred": "AIRPORTS AUTHORITY OF INDIA",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 0,
+          "text": "86mlQ-PQ6",
+          "confidence": 0.6526,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 1,
+          "text": "F:h a1-",
+          "confidence": 0.5072,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_04_receipt.jpg",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "conditions": [
+        "receipts_numeric",
+        "indoor_warm",
+        "close_distance",
+        "small_text"
+      ],
+      "detected_count": 14,
+      "recognized_count": 14,
+      "unresolved_count": 0,
+      "latency_ms": 366.4,
+      "line_evaluations": [
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 0,
+          "gt_text": "Betaald met Visa",
+          "gt_script": "LATIN",
+          "gt_char_count": 16,
+          "gt_word_count": 3,
+          "matched_pred": "Betaald met Visa",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 1,
+          "gt_text": "€ 6,99",
+          "gt_script": "LATIN",
+          "gt_char_count": 6,
+          "gt_word_count": 2,
+          "matched_pred": "€ 6,99",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 2,
+          "gt_text": "Word VIP",
+          "gt_script": "LATIN",
+          "gt_char_count": 8,
+          "gt_word_count": 2,
+          "matched_pred": "Word VIP",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 3,
+          "gt_text": "Registreer u nu voor exclusieve beloningen",
+          "gt_script": "LATIN",
+          "gt_char_count": 42,
+          "gt_word_count": 6,
+          "matched_pred": "Registreer u nu voor exclusieve beloningen",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 4,
+          "gt_text": "en voordelen",
+          "gt_script": "LATIN",
+          "gt_char_count": 12,
+          "gt_word_count": 2,
+          "matched_pred": "en voordelen",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 5,
+          "gt_text": "VIP.LEGO.com/register",
+          "gt_script": "LATIN",
+          "gt_char_count": 21,
+          "gt_word_count": 1,
+          "matched_pred": "VIP.LEGO.com/register",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 6,
+          "gt_text": "Abonneren op e-mails",
+          "gt_script": "LATIN",
+          "gt_char_count": 20,
+          "gt_word_count": 3,
+          "matched_pred": "Abonneren op e-mails",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 7,
+          "gt_text": "Blijf op de hoogte door u aan te melden voor",
+          "gt_script": "LATIN",
+          "gt_char_count": 44,
+          "gt_word_count": 10,
+          "matched_pred": "Blijf op de hoogte door u aan te melden voor",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 8,
+          "gt_text": "ons e-mailprogramma LEGO.com/email",
+          "gt_script": "LATIN",
+          "gt_char_count": 34,
+          "gt_word_count": 3,
+          "matched_pred": "ons e-mailprogramma LEGO.com/email",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 9,
+          "gt_text": "We stellen uw feedback op prijs",
+          "gt_script": "LATIN",
+          "gt_char_count": 31,
+          "gt_word_count": 6,
+          "matched_pred": "We stellen uw feedback op prijs",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 10,
+          "gt_text": "Vertel ons over uw ervaring. Ga naar",
+          "gt_script": "LATIN",
+          "gt_char_count": 36,
+          "gt_word_count": 7,
+          "matched_pred": "Vertel ons over uw ervaring. Ga naar",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_04_receipt.jpg",
+          "line_index": 11,
+          "gt_text": "LEGO.com/storesurvey",
+          "gt_script": "LATIN",
+          "gt_char_count": 20,
+          "gt_word_count": 1,
+          "matched_pred": "LEGO.com/storesurvey",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 0,
+          "text": "erschuldigd saldo",
+          "confidence": 0.9946,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 1,
+          "text": "£6,99",
+          "confidence": 0.8755,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_05_medicine.jpg",
+      "resolution": [
+        1919,
+        1440
+      ],
+      "conditions": [
+        "medicine_packaging",
+        "indoor_fluorescent",
+        "close_distance",
+        "small_text",
+        "numeric_values"
+      ],
+      "detected_count": 9,
+      "recognized_count": 9,
+      "unresolved_count": 0,
+      "latency_ms": 528.06,
+      "line_evaluations": [
+        {
+          "sample_image": "real_05_medicine.jpg",
+          "line_index": 0,
+          "gt_text": "onsior",
+          "gt_script": "LATIN",
+          "gt_char_count": 6,
+          "gt_word_count": 1,
+          "matched_pred": "onsiorm",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.1667,
+          "word_edits": 1,
+          "wer": 1.0
+        },
+        {
+          "sample_image": "real_05_medicine.jpg",
+          "line_index": 1,
+          "gt_text": "(robenacoxib)",
+          "gt_script": "LATIN",
+          "gt_char_count": 13,
+          "gt_word_count": 1,
+          "matched_pred": "(robenacoxib)",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_05_medicine.jpg",
+          "line_index": 2,
+          "gt_text": "6mg tablet",
+          "gt_script": "LATIN",
+          "gt_char_count": 10,
+          "gt_word_count": 2,
+          "matched_pred": "6mg tablet",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_05_medicine.jpg",
+          "line_index": 3,
+          "gt_text": "For oral use in Cats Only.",
+          "gt_script": "LATIN",
+          "gt_char_count": 26,
+          "gt_word_count": 6,
+          "matched_pred": "For oral use in Cats Only.",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_05_medicine.jpg",
+          "line_index": 4,
+          "gt_text": "≥5.5 pounds and",
+          "gt_script": "LATIN",
+          "gt_char_count": 15,
+          "gt_word_count": 3,
+          "matched_pred": "≥5.5pounds and",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.0667,
+          "word_edits": 2,
+          "wer": 0.6667
+        },
+        {
+          "sample_image": "real_05_medicine.jpg",
+          "line_index": 5,
+          "gt_text": "≥ 4 months of age",
+          "gt_script": "LATIN",
+          "gt_char_count": 17,
+          "gt_word_count": 5,
+          "matched_pred": "≥4 months of age",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.0588,
+          "word_edits": 2,
+          "wer": 0.4
+        },
+        {
+          "sample_image": "real_05_medicine.jpg",
+          "line_index": 6,
+          "gt_text": "Elanco",
+          "gt_script": "LATIN",
+          "gt_char_count": 6,
+          "gt_word_count": 1,
+          "matched_pred": "Elanco",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 7,
+          "text": "LE1O 9990LET15",
+          "confidence": 0.4833,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 8,
+          "text": "T.10 ElaEsore",
+          "confidence": 0.5229,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_06_hindi_sign.jpg",
+      "resolution": [
+        1920,
+        1440
+      ],
+      "conditions": [
+        "hindi_printed",
+        "mixed_hindi_english",
+        "outdoor_daylight",
+        "medium_distance",
+        "railway_signage"
+      ],
+      "detected_count": 5,
+      "recognized_count": 4,
+      "unresolved_count": 1,
+      "latency_ms": 414.65,
+      "line_evaluations": [
+        {
+          "sample_image": "real_06_hindi_sign.jpg",
+          "line_index": 0,
+          "gt_text": "RANI KAMALAPATI",
+          "gt_script": "LATIN",
+          "gt_char_count": 15,
+          "gt_word_count": 2,
+          "matched_pred": "RANI KAMALAPATI",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_06_hindi_sign.jpg",
+          "line_index": 1,
+          "gt_text": "RAILWAY STATION",
+          "gt_script": "LATIN",
+          "gt_char_count": 15,
+          "gt_word_count": 2,
+          "matched_pred": "RAILWAY STATION",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_06_hindi_sign.jpg",
+          "line_index": 2,
+          "gt_text": "रानी कमलापति",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 12,
+          "gt_word_count": 2,
+          "matched_pred": "रानी कमलापति",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_06_hindi_sign.jpg",
+          "line_index": 3,
+          "gt_text": "रेलवे स्टेशन",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 12,
+          "gt_word_count": 2,
+          "matched_pred": "रेलवे स्टेशन",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        }
+      ],
+      "unmatched_predictions": []
+    },
+    {
+      "image": "real_07_chandi_mandir.jpg",
+      "resolution": [
+        1032,
+        581
+      ],
+      "conditions": [
+        "mixed_hindi_english",
+        "outdoor_daylight",
+        "far_distance",
+        "small_text",
+        "railway_signage"
+      ],
+      "detected_count": 7,
+      "recognized_count": 6,
+      "unresolved_count": 1,
+      "latency_ms": 407.32,
+      "line_evaluations": [
+        {
+          "sample_image": "real_07_chandi_mandir.jpg",
+          "line_index": 0,
+          "gt_text": "चण्डी",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 5,
+          "gt_word_count": 1,
+          "matched_pred": "चण्डी",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_07_chandi_mandir.jpg",
+          "line_index": 1,
+          "gt_text": "मन्दिर",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 6,
+          "gt_word_count": 1,
+          "matched_pred": "मन्दर",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.1667,
+          "word_edits": 1,
+          "wer": 1.0
+        },
+        {
+          "sample_image": "real_07_chandi_mandir.jpg",
+          "line_index": 2,
+          "gt_text": "CHANDI",
+          "gt_script": "LATIN",
+          "gt_char_count": 6,
+          "gt_word_count": 1,
+          "matched_pred": "CHANDI",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_07_chandi_mandir.jpg",
+          "line_index": 3,
+          "gt_text": "MANDIR",
+          "gt_script": "LATIN",
+          "gt_char_count": 6,
+          "gt_word_count": 1,
+          "matched_pred": "MANDIR",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_07_chandi_mandir.jpg",
+          "line_index": 4,
+          "gt_text": "HEIGHT ABOVE MSL 353.83 Mtr",
+          "gt_script": "LATIN",
+          "gt_char_count": 27,
+          "gt_word_count": 5,
+          "matched_pred": "HEIGHT AB0VE MSL 353.83 Mtr",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.037,
+          "word_edits": 1,
+          "wer": 0.2
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 5,
+          "text": "T3$353.83",
+          "confidence": 0.8419,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_08_masjid_irwin.jpg",
+      "resolution": [
+        1440,
+        1920
+      ],
+      "conditions": [
+        "hindi_printed",
+        "mixed_hindi_english",
+        "outdoor_daylight",
+        "medium_distance",
+        "signage"
+      ],
+      "detected_count": 5,
+      "recognized_count": 5,
+      "unresolved_count": 0,
+      "latency_ms": 410.64,
+      "line_evaluations": [
+        {
+          "sample_image": "real_08_masjid_irwin.jpg",
+          "line_index": 0,
+          "gt_text": "मस्जिद",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 6,
+          "gt_word_count": 1,
+          "matched_pred": "मस्जिद",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_08_masjid_irwin.jpg",
+          "line_index": 1,
+          "gt_text": "इरविन रोड",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 9,
+          "gt_word_count": 2,
+          "matched_pred": "इरविन रोड",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_08_masjid_irwin.jpg",
+          "line_index": 2,
+          "gt_text": "MASJID",
+          "gt_script": "LATIN",
+          "gt_char_count": 6,
+          "gt_word_count": 1,
+          "matched_pred": "MASJID",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_08_masjid_irwin.jpg",
+          "line_index": 3,
+          "gt_text": "IRWIN ROAD",
+          "gt_script": "LATIN",
+          "gt_char_count": 10,
+          "gt_word_count": 2,
+          "matched_pred": "IRWIN ROAD",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 2,
+          "text": "305",
+          "confidence": 0.4988,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_09_panadol_med.jpg",
+      "resolution": [
+        1920,
+        1440
+      ],
+      "conditions": [
+        "medicine_packaging",
+        "indoor_fluorescent",
+        "close_distance",
+        "small_text",
+        "numeric_values"
+      ],
+      "detected_count": 10,
+      "recognized_count": 9,
+      "unresolved_count": 1,
+      "latency_ms": 438.89,
+      "line_evaluations": [
+        {
+          "sample_image": "real_09_panadol_med.jpg",
+          "line_index": 0,
+          "gt_text": "Vnr 05 79 65",
+          "gt_script": "LATIN",
+          "gt_char_count": 12,
+          "gt_word_count": 4,
+          "matched_pred": "Vnr 05 79 65",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_09_panadol_med.jpg",
+          "line_index": 1,
+          "gt_text": "Panadol",
+          "gt_script": "LATIN",
+          "gt_char_count": 7,
+          "gt_word_count": 1,
+          "matched_pred": "Panadol",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_09_panadol_med.jpg",
+          "line_index": 2,
+          "gt_text": "500 mg",
+          "gt_script": "LATIN",
+          "gt_char_count": 6,
+          "gt_word_count": 2,
+          "matched_pred": "500 mg",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_09_panadol_med.jpg",
+          "line_index": 3,
+          "gt_text": "paracetamol",
+          "gt_script": "LATIN",
+          "gt_char_count": 11,
+          "gt_word_count": 1,
+          "matched_pred": "paracetamol",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 4,
+          "text": "tlapdiscon siiyyn jn luumeescen",
+          "confidence": 0.7106,
+          "script": "DEVANAGARI",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 5,
+          "text": "Wo arallig wik cdh fehe",
+          "confidence": 0.5394,
+          "script": "DEVANAGARI",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 7,
+          "text": "kavopdallysteisra/",
+          "confidence": 0.8152,
+          "script": "DEVANAGARI",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 8,
+          "text": "Aimdragerade tabi",
+          "confidence": 0.831,
+          "script": "DEVANAGARI",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 9,
+          "text": "30.",
+          "confidence": 0.7799,
+          "script": "DEVANAGARI",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_10_supermarket_receipt.jpg",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "conditions": [
+        "receipts_numeric",
+        "indoor_warm",
+        "close_distance",
+        "small_text"
+      ],
+      "detected_count": 15,
+      "recognized_count": 7,
+      "unresolved_count": 8,
+      "latency_ms": 415.65,
+      "line_evaluations": [
+        {
+          "sample_image": "real_10_supermarket_receipt.jpg",
+          "line_index": 0,
+          "gt_text": "SAHAN",
+          "gt_script": "LATIN",
+          "gt_char_count": 5,
+          "gt_word_count": 1,
+          "matched_pred": "",
+          "detected": false,
+          "exact_match": false,
+          "char_edits": 5,
+          "cer": 1.0,
+          "word_edits": 1,
+          "wer": 1.0
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 0,
+          "text": "9am",
+          "confidence": 0.8104,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 2,
+          "text": "ASSUA",
+          "confidence": 0.5773,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 6,
+          "text": "N",
+          "confidence": 0.8923,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 9,
+          "text": "cey",
+          "confidence": 0.4914,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 11,
+          "text": ":epeg M18",
+          "confidence": 0.7982,
+          "script": "DEVANAGARI",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 13,
+          "text": "syns6/श1",
+          "confidence": 0.6048,
+          "script": "DEVANAGARI",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        },
+        {
+          "region_id": 14,
+          "text": ",7>",
+          "confidence": 0.6247,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_11_perspective_angle.jpg",
+      "resolution": [
+        1440,
+        1920
+      ],
+      "conditions": [
+        "perspective_angle",
+        "hindi_printed",
+        "mixed_hindi_english",
+        "signage"
+      ],
+      "detected_count": 5,
+      "recognized_count": 5,
+      "unresolved_count": 0,
+      "latency_ms": 295.96,
+      "line_evaluations": [
+        {
+          "sample_image": "real_11_perspective_angle.jpg",
+          "line_index": 0,
+          "gt_text": "मस्जिद",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 6,
+          "gt_word_count": 1,
+          "matched_pred": "मस्जिद",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_11_perspective_angle.jpg",
+          "line_index": 1,
+          "gt_text": "इरविन रोड",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 9,
+          "gt_word_count": 2,
+          "matched_pred": "इरविन रोड",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_11_perspective_angle.jpg",
+          "line_index": 2,
+          "gt_text": "MASJID",
+          "gt_script": "LATIN",
+          "gt_char_count": 6,
+          "gt_word_count": 1,
+          "matched_pred": "MASJID",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_11_perspective_angle.jpg",
+          "line_index": 3,
+          "gt_text": "IRWIN ROAD",
+          "gt_script": "LATIN",
+          "gt_char_count": 10,
+          "gt_word_count": 2,
+          "matched_pred": "IRWIN ROAD",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 2,
+          "text": "3015",
+          "confidence": 0.4651,
+          "script": "LATIN",
+          "category": "UNANNOTATED_SCENE_TEXT"
+        }
+      ]
+    },
+    {
+      "image": "real_12_motion_blur.jpg",
+      "resolution": [
+        1908,
+        1623
+      ],
+      "conditions": [
+        "mild_blur_motion",
+        "mixed_hindi_english",
+        "indoor_fluorescent",
+        "signage"
+      ],
+      "detected_count": 12,
+      "recognized_count": 10,
+      "unresolved_count": 2,
+      "latency_ms": 514.15,
+      "line_evaluations": [
+        {
+          "sample_image": "real_12_motion_blur.jpg",
+          "line_index": 0,
+          "gt_text": "राजीव",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 5,
+          "gt_word_count": 1,
+          "matched_pred": "राजाव",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.2,
+          "word_edits": 1,
+          "wer": 1.0
+        },
+        {
+          "sample_image": "real_12_motion_blur.jpg",
+          "line_index": 1,
+          "gt_text": "चौक",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 3,
+          "gt_word_count": 1,
+          "matched_pred": "चाक",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 1,
+          "cer": 0.3333,
+          "word_edits": 1,
+          "wer": 1.0
+        },
+        {
+          "sample_image": "real_12_motion_blur.jpg",
+          "line_index": 2,
+          "gt_text": "बाराखम्बा",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 9,
+          "gt_word_count": 1,
+          "matched_pred": "बाराखम्बा",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_12_motion_blur.jpg",
+          "line_index": 3,
+          "gt_text": "रोड",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 3,
+          "gt_word_count": 1,
+          "matched_pred": "रोड",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_12_motion_blur.jpg",
+          "line_index": 4,
+          "gt_text": "मण्डी",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 5,
+          "gt_word_count": 1,
+          "matched_pred": "",
+          "detected": false,
+          "exact_match": false,
+          "char_edits": 5,
+          "cer": 1.0,
+          "word_edits": 1,
+          "wer": 1.0
+        },
+        {
+          "sample_image": "real_12_motion_blur.jpg",
+          "line_index": 5,
+          "gt_text": "हाऊस",
+          "gt_script": "DEVANAGARI",
+          "gt_char_count": 4,
+          "gt_word_count": 1,
+          "matched_pred": "हाऊस",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_12_motion_blur.jpg",
+          "line_index": 6,
+          "gt_text": "RajivChowk",
+          "gt_script": "LATIN",
+          "gt_char_count": 10,
+          "gt_word_count": 1,
+          "matched_pred": "RajivChowk",
+          "detected": true,
+          "exact_match": true,
+          "char_edits": 0,
+          "cer": 0.0,
+          "word_edits": 0,
+          "wer": 0.0
+        },
+        {
+          "sample_image": "real_12_motion_blur.jpg",
+          "line_index": 7,
+          "gt_text": "Barakhamba Road",
+          "gt_script": "LATIN",
+          "gt_char_count": 15,
+          "gt_word_count": 2,
+          "matched_pred": "Barakhamba",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 5,
+          "cer": 0.3333,
+          "word_edits": 1,
+          "wer": 0.5
+        },
+        {
+          "sample_image": "real_12_motion_blur.jpg",
+          "line_index": 8,
+          "gt_text": "MandiHouse",
+          "gt_script": "LATIN",
+          "gt_char_count": 10,
+          "gt_word_count": 1,
+          "matched_pred": "House",
+          "detected": true,
+          "exact_match": false,
+          "char_edits": 5,
+          "cer": 0.5,
+          "word_edits": 1,
+          "wer": 1.0
+        }
+      ],
+      "unmatched_predictions": [
+        {
+          "region_id": 9,
+          "text": "Road",
+          "confidence": 0.9993,
+          "script": "LATIN",
+          "category": "FRAGMENT"
+        },
+        {
+          "region_id": 10,
+          "text": "Mandi",
+          "confidence": 0.9992,
+          "script": "LATIN",
+          "category": "FRAGMENT"
+        }
+      ]
+    }
+  ]
+}

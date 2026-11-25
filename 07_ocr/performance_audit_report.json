@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-20 02:41:20",
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU (6GB VRAM)",
+    "onnxruntime_providers": {
+      "detector": "CUDAExecutionProvider",
+      "recognizer_hindi": "CUDAExecutionProvider",
+      "recognizer_english": "CUDAExecutionProvider"
+    },
+    "test_resolution": "1920x1080 (1080p Full HD)",
+    "warm_iterations": 50
+  },
+  "latency_audit_1080p": {
+    "cold_start_total_ms": 21399.88,
+    "cold_start_inference_ms": 3641.13,
+    "warm_inference_ms": {
+      "median": 435.9,
+      "p95": 561.02,
+      "mean": 435.49,
+      "min": 298.06,
+      "max": 645.42
+    },
+    "subsystem_breakdown_ms": {
+      "dbnet_detection": {
+        "median": 167.79,
+        "mean": 176.45,
+        "p95": 250.39
+      },
+      "script_routing": {
+        "median": 94.25,
+        "mean": 98.1,
+        "p95": 142.88
+      },
+      "batched_recognition": {
+        "median": 117.13,
+        "mean": 128.17,
+        "p95": 189.06
+      },
+      "sequential_recognition_baseline": {
+        "median": 1827.31,
+        "mean": 1852.28,
+        "p95": 2484.81
+      },
+      "recognition_speedup_factor": 15.6
+    }
+  },
+  "fps_audit": {
+    "camera_preview_only_fps": 28.41,
+    "camera_preview_with_ocr_worker_fps": 28.39,
+    "multi_module_pipeline_with_ocr_fps": 2.93,
+    "multi_module_frame_latency_ms": {
+      "median": 292.71,
+      "p95": 584.62
+    }
+  },
+  "resource_utilization": {
+    "vram_baseline_mb": 0.0,
+    "vram_ocr_engine_mb": 397.0,
+    "vram_multi_module_peak_mb": 827.0,
+    "vram_total_available_mb": 6141.0,
+    "vram_margin_headroom_mb": 5094.0,
+    "host_ram_working_set_peak_mb": 1413.05
+  }
+}

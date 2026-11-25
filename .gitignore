@@ -1,0 +1,67 @@
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.swp
+*.bak
+.backup_*/
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables & Sensitive Credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.token
+
+# Large ML Weights & Model Files (> 50-100MB)
+models/**/*.onnx
+models/**/*.pt
+models/**/*.bin
+models/**/*.weights
+models/*.onnx
+models/*.pt
+models/*.bin
+models/stt/
+models/tts/kokoro/
+*.onnx
+*.pt
+*.weights
+
+# Multimedia Recordings & Test Video Demos
+recordings/*.mp4
+recordings/*.avi
+recordings/*.mkv
+recordings/*.h264
+snapshots/
+scratch/
+*.jpg
+*.jpeg
+*.png
+data/diagnostic_frames/
+data/ocr_diagnostics/
+data/tts_samples/*.wav
+
+# Local SQLite Databases, Keys & Logs
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.log
+data/emergency_alerts.jsonl
+data/face_db.key
+data/face_db.bin
+onnxruntime_profile__*.json
+
+# OS Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+

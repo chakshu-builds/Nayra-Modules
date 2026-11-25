@@ -1,0 +1,72 @@
+[
+  {
+    "workflow": "1. Object Location",
+    "query": "Mera phone kahan hai?",
+    "intent": "FIND_OBJECT",
+    "latency_ms": 0.77,
+    "status": "PASSED"
+  },
+  {
+    "workflow": "2. Scene Description",
+    "query": "Mere aas paas kya hai?",
+    "intent": "DESCRIBE_SCENE",
+    "latency_ms": 0.13,
+    "status": "PASSED"
+  },
+  {
+    "workflow": "3. Obstacle Awareness",
+    "query": "Mere saamne kya hai?",
+    "intent": "DESCRIBE_SCENE",
+    "latency_ms": 0.03,
+    "status": "PASSED"
+  },
+  {
+    "workflow": "4. Orientation Guidance",
+    "query": "Aaj kaun sa din hai?",
+    "intent": "HELP",
+    "latency_ms": 0.07,
+    "status": "PASSED"
+  },
+  {
+    "workflow": "5. Familiar Person Recall",
+    "query": "Yeh kaun hai?",
+    "intent": "IDENTIFY_PERSON",
+    "latency_ms": 0.17,
+    "status": "PASSED"
+  },
+  {
+    "workflow": "6. Medication Reminder",
+    "query": "Meri medicine kab leni hai?",
+    "intent": "LIST_REMINDERS",
+    "latency_ms": 1.49,
+    "status": "PASSED"
+  },
+  {
+    "workflow": "7. Hydration Reminder",
+    "query": "Mujhe 10 minute baad paani peene ka reminder do",
+    "intent": "SET_REMINDER",
+    "latency_ms": 7.77,
+    "status": "PASSED"
+  },
+  {
+    "workflow": "8. Emergency Assistance",
+    "query": "Help me emergency hai",
+    "intent": "TRIGGER_SOS",
+    "latency_ms": 0.41,
+    "status": "PASSED"
+  },
+  {
+    "workflow": "9. Conversational/Help",
+    "query": "Aap kya madad kar sakti ho?",
+    "intent": "HELP",
+    "latency_ms": 0.04,
+    "status": "PASSED"
+  },
+  {
+    "workflow": "10. Unsupported Request",
+    "query": "Alien spaceship launch karo",
+    "intent": "UNKNOWN",
+    "latency_ms": 0.05,
+    "status": "PASSED"
+  }
+]

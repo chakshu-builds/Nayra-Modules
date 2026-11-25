@@ -1,0 +1,396 @@
+[
+  {
+    "image": "real_01_metro_mixed.jpg",
+    "conditions": [
+      "mixed_hindi_english",
+      "indoor_fluorescent",
+      "medium_distance",
+      "signage"
+    ],
+    "lines": [
+      {
+        "text": "राजीव",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "चौक",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "बाराखम्बा",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "रोड",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "मण्डी",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "हाऊस",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "RajivChowk",
+        "script": "LATIN"
+      },
+      {
+        "text": "Barakhamba Road",
+        "script": "LATIN"
+      },
+      {
+        "text": "MandiHouse",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_02_railway_en.jpg",
+    "conditions": [
+      "english_printed",
+      "outdoor_daylight",
+      "medium_distance",
+      "railway_signage",
+      "numeric_values"
+    ],
+    "lines": [
+      {
+        "text": "NEW DELHI",
+        "script": "LATIN"
+      },
+      {
+        "text": "MEAN SEA LEVEL 214-42",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_03_airport_sign.jpg",
+    "conditions": [
+      "mixed_hindi_english",
+      "indoor_fluorescent",
+      "medium_distance",
+      "airport_signage"
+    ],
+    "lines": [
+      {
+        "text": "FREE WI-FI ZONE",
+        "script": "LATIN"
+      },
+      {
+        "text": "भारतीय विमानपत्तन प्राधिकरण",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "AIRPORTS AUTHORITY OF INDIA",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_04_receipt.jpg",
+    "conditions": [
+      "receipts_numeric",
+      "indoor_warm",
+      "close_distance",
+      "small_text"
+    ],
+    "lines": [
+      {
+        "text": "Betaald met Visa",
+        "script": "LATIN"
+      },
+      {
+        "text": "€ 6,99",
+        "script": "LATIN"
+      },
+      {
+        "text": "Word VIP",
+        "script": "LATIN"
+      },
+      {
+        "text": "Registreer u nu voor exclusieve beloningen",
+        "script": "LATIN"
+      },
+      {
+        "text": "en voordelen",
+        "script": "LATIN"
+      },
+      {
+        "text": "VIP.LEGO.com/register",
+        "script": "LATIN"
+      },
+      {
+        "text": "Abonneren op e-mails",
+        "script": "LATIN"
+      },
+      {
+        "text": "Blijf op de hoogte door u aan te melden voor",
+        "script": "LATIN"
+      },
+      {
+        "text": "ons e-mailprogramma LEGO.com/email",
+        "script": "LATIN"
+      },
+      {
+        "text": "We stellen uw feedback op prijs",
+        "script": "LATIN"
+      },
+      {
+        "text": "Vertel ons over uw ervaring. Ga naar",
+        "script": "LATIN"
+      },
+      {
+        "text": "LEGO.com/storesurvey",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_05_medicine.jpg",
+    "conditions": [
+      "medicine_packaging",
+      "indoor_fluorescent",
+      "close_distance",
+      "small_text",
+      "numeric_values"
+    ],
+    "lines": [
+      {
+        "text": "onsior",
+        "script": "LATIN"
+      },
+      {
+        "text": "(robenacoxib)",
+        "script": "LATIN"
+      },
+      {
+        "text": "6mg tablet",
+        "script": "LATIN"
+      },
+      {
+        "text": "For oral use in Cats Only.",
+        "script": "LATIN"
+      },
+      {
+        "text": "≥5.5 pounds and",
+        "script": "LATIN"
+      },
+      {
+        "text": "≥ 4 months of age",
+        "script": "LATIN"
+      },
+      {
+        "text": "Elanco",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_06_hindi_sign.jpg",
+    "conditions": [
+      "hindi_printed",
+      "mixed_hindi_english",
+      "outdoor_daylight",
+      "medium_distance",
+      "railway_signage"
+    ],
+    "lines": [
+      {
+        "text": "RANI KAMALAPATI",
+        "script": "LATIN"
+      },
+      {
+        "text": "RAILWAY STATION",
+        "script": "LATIN"
+      },
+      {
+        "text": "रानी कमलापति",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "रेलवे स्टेशन",
+        "script": "DEVANAGARI"
+      }
+    ]
+  },
+  {
+    "image": "real_07_chandi_mandir.jpg",
+    "conditions": [
+      "mixed_hindi_english",
+      "outdoor_daylight",
+      "far_distance",
+      "small_text",
+      "railway_signage"
+    ],
+    "lines": [
+      {
+        "text": "चण्डी",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "मन्दिर",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "CHANDI",
+        "script": "LATIN"
+      },
+      {
+        "text": "MANDIR",
+        "script": "LATIN"
+      },
+      {
+        "text": "HEIGHT ABOVE MSL 353.83 Mtr",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_08_masjid_irwin.jpg",
+    "conditions": [
+      "hindi_printed",
+      "mixed_hindi_english",
+      "outdoor_daylight",
+      "medium_distance",
+      "signage"
+    ],
+    "lines": [
+      {
+        "text": "मस्जिद",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "इरविन रोड",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "MASJID",
+        "script": "LATIN"
+      },
+      {
+        "text": "IRWIN ROAD",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_09_panadol_med.jpg",
+    "conditions": [
+      "medicine_packaging",
+      "indoor_fluorescent",
+      "close_distance",
+      "small_text",
+      "numeric_values"
+    ],
+    "lines": [
+      {
+        "text": "Vnr 05 79 65",
+        "script": "LATIN"
+      },
+      {
+        "text": "Panadol",
+        "script": "LATIN"
+      },
+      {
+        "text": "500 mg",
+        "script": "LATIN"
+      },
+      {
+        "text": "paracetamol",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_10_supermarket_receipt.jpg",
+    "conditions": [
+      "receipts_numeric",
+      "indoor_warm",
+      "close_distance",
+      "small_text"
+    ],
+    "lines": [
+      {
+        "text": "SAHAN",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_11_perspective_angle.jpg",
+    "conditions": [
+      "perspective_angle",
+      "hindi_printed",
+      "mixed_hindi_english",
+      "signage"
+    ],
+    "lines": [
+      {
+        "text": "मस्जिद",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "इरविन रोड",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "MASJID",
+        "script": "LATIN"
+      },
+      {
+        "text": "IRWIN ROAD",
+        "script": "LATIN"
+      }
+    ]
+  },
+  {
+    "image": "real_12_motion_blur.jpg",
+    "conditions": [
+      "mild_blur_motion",
+      "mixed_hindi_english",
+      "indoor_fluorescent",
+      "signage"
+    ],
+    "lines": [
+      {
+        "text": "राजीव",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "चौक",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "बाराखम्बा",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "रोड",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "मण्डी",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "हाऊस",
+        "script": "DEVANAGARI"
+      },
+      {
+        "text": "RajivChowk",
+        "script": "LATIN"
+      },
+      {
+        "text": "Barakhamba Road",
+        "script": "LATIN"
+      },
+      {
+        "text": "MandiHouse",
+        "script": "LATIN"
+      }
+    ]
+  }
+]

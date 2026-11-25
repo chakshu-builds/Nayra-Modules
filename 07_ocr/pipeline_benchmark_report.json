@@ -1,0 +1,350 @@
+{
+  "timestamp": "2026-11-20 01:29:21",
+  "active_execution_providers": {
+    "detector": "CUDAExecutionProvider",
+    "recognizer_hindi": "CUDAExecutionProvider",
+    "recognizer_english": "CUDAExecutionProvider"
+  },
+  "standalone_poc_equivalence": {
+    "all_matched": true,
+    "total_samples": 25,
+    "matched_samples": 25,
+    "sample_details": [
+      {
+        "sample": "hindi_sample_01",
+        "script": "DEVANAGARI",
+        "poc_text": "नमस्ते भारत",
+        "integrated_text": "नमस्ते भारत",
+        "exact_match": true,
+        "poc_conf": 0.9881,
+        "integrated_conf": 0.9881
+      },
+      {
+        "sample": "hindi_sample_02",
+        "script": "DEVANAGARI",
+        "poc_text": "दल्ली विश्विदि्यालय",
+        "integrated_text": "दल्ली विश्विदि्यालय",
+        "exact_match": true,
+        "poc_conf": 0.9265,
+        "integrated_conf": 0.9265
+      },
+      {
+        "sample": "hindi_sample_03",
+        "script": "DEVANAGARI",
+        "poc_text": "अस्पताल एवं आपातकालीन सेवा",
+        "integrated_text": "अस्पताल एवं आपातकालीन सेवा",
+        "exact_match": true,
+        "poc_conf": 0.9764,
+        "integrated_conf": 0.9764
+      },
+      {
+        "sample": "hindi_sample_04",
+        "script": "DEVANAGARI",
+        "poc_text": "कृपया यहाँ कूड़ा न फेकें",
+        "integrated_text": "कृपया यहाँ कूड़ा न फेकें",
+        "exact_match": true,
+        "poc_conf": 0.8978,
+        "integrated_conf": 0.8978
+      },
+      {
+        "sample": "hindi_sample_05",
+        "script": "DEVANAGARI",
+        "poc_text": "भारत सरकार | गृह मंत्रालय",
+        "integrated_text": "भारत सरकार | गृह मंत्रालय",
+        "exact_match": true,
+        "poc_conf": 0.9724,
+        "integrated_conf": 0.9724
+      },
+      {
+        "sample": "hindi_sample_06",
+        "script": "DEVANAGARI",
+        "poc_text": "दनिंक: २५ अगस्त २०२६",
+        "integrated_text": "दनिंक: २५ अगस्त २०२६",
+        "exact_match": true,
+        "poc_conf": 0.9324,
+        "integrated_conf": 0.9324
+      },
+      {
+        "sample": "hindi_sample_07",
+        "script": "DEVANAGARI",
+        "poc_text": "शुलक: रु५०० परति व्यक्ति",
+        "integrated_text": "शुलक: रु५०० परति व्यक्ति",
+        "exact_match": true,
+        "poc_conf": 0.8829,
+        "integrated_conf": 0.8829
+      },
+      {
+        "sample": "hindi_sample_08",
+        "script": "DEVANAGARI",
+        "poc_text": "सुरक्षा नियिम 100% अनवार्य",
+        "integrated_text": "सुरक्षा नियिम 100% अनवार्य",
+        "exact_match": true,
+        "poc_conf": 0.9676,
+        "integrated_conf": 0.9676
+      },
+      {
+        "sample": "hindi_sample_09",
+        "script": "DEVANAGARI",
+        "poc_text": "ज़ला प्रशासन कार्यालय",
+        "integrated_text": "ज़ला प्रशासन कार्यालय",
+        "exact_match": true,
+        "poc_conf": 0.9537,
+        "integrated_conf": 0.9537
+      },
+      {
+        "sample": "hindi_sample_10",
+        "script": "DEVANAGARI",
+        "poc_text": "ट्रेन संख्या 12345 समय पर है।",
+        "integrated_text": "ट्रेन संख्या 12345 समय पर है।",
+        "exact_match": true,
+        "poc_conf": 0.9919,
+        "integrated_conf": 0.9919
+      },
+      {
+        "sample": "english_sample_en_01",
+        "script": "LATIN",
+        "poc_text": "EMERGENCY EXIT",
+        "integrated_text": "EMERGENCY EXIT",
+        "exact_match": true,
+        "poc_conf": 0.9936,
+        "integrated_conf": 0.9936
+      },
+      {
+        "sample": "english_sample_en_02",
+        "script": "LATIN",
+        "poc_text": "NAYRA Assistive Vision",
+        "integrated_text": "NAYRA Assistive Vision",
+        "exact_match": true,
+        "poc_conf": 0.9751,
+        "integrated_conf": 0.9751
+      },
+      {
+        "sample": "english_sample_en_03",
+        "script": "LATIN",
+        "poc_text": "please keep this area clear.",
+        "integrated_text": "please keep this area clear.",
+        "exact_match": true,
+        "poc_conf": 0.9857,
+        "integrated_conf": 0.9857
+      },
+      {
+        "sample": "english_sample_en_04",
+        "script": "LATIN",
+        "poc_text": "Gate 4B - Terminal 2",
+        "integrated_text": "Gate 4B - Terminal 2",
+        "exact_match": true,
+        "poc_conf": 0.9794,
+        "integrated_conf": 0.9794
+      },
+      {
+        "sample": "english_sample_en_05",
+        "script": "LATIN",
+        "poc_text": "Train 1240 to Central Station",
+        "integrated_text": "Train 1240 to Central Station",
+        "exact_match": true,
+        "poc_conf": 0.9897,
+        "integrated_conf": 0.9897
+      },
+      {
+        "sample": "english_sample_en_06",
+        "script": "LATIN",
+        "poc_text": "Total: $49.99 (Tax Incl.)",
+        "integrated_text": "Total: $49.99 (Tax Incl.)",
+        "exact_match": true,
+        "poc_conf": 0.9637,
+        "integrated_conf": 0.9637
+      },
+      {
+        "sample": "english_sample_en_07",
+        "script": "LATIN",
+        "poc_text": "WARNING: High Voltage!",
+        "integrated_text": "WARNING: High Voltage!",
+        "exact_match": true,
+        "poc_conf": 0.9809,
+        "integrated_conf": 0.9809
+      },
+      {
+        "sample": "english_sample_en_08",
+        "script": "LATIN",
+        "poc_text": "Model: NYR-8000-PRO",
+        "integrated_text": "Model: NYR-8000-PRO",
+        "exact_match": true,
+        "poc_conf": 0.9979,
+        "integrated_conf": 0.9979
+      },
+      {
+        "sample": "english_sample_en_09",
+        "script": "LATIN",
+        "poc_text": "Room 402: Chief Medical Officer",
+        "integrated_text": "Room 402: Chief Medical Officer",
+        "exact_match": true,
+        "poc_conf": 0.9983,
+        "integrated_conf": 0.9983
+      },
+      {
+        "sample": "english_sample_en_10",
+        "script": "LATIN",
+        "poc_text": "contact@nayra.org |www.nayra.ai",
+        "integrated_text": "contact@nayra.org |www.nayra.ai",
+        "exact_match": true,
+        "poc_conf": 0.966,
+        "integrated_conf": 0.966
+      },
+      {
+        "sample": "english_sample_en_11",
+        "script": "LATIN",
+        "poc_text": "Date: 25-Aug-2026 14:30",
+        "integrated_text": "Date: 25-Aug-2026 14:30",
+        "exact_match": true,
+        "poc_conf": 0.9666,
+        "integrated_conf": 0.9666
+      },
+      {
+        "sample": "english_sample_en_12",
+        "script": "LATIN",
+        "poc_text": "Push to Open / Pull to Close",
+        "integrated_text": "Push to Open / Pull to Close",
+        "exact_match": true,
+        "poc_conf": 0.9619,
+        "integrated_conf": 0.9619
+      },
+      {
+        "sample": "english_sample_en_13",
+        "script": "LATIN",
+        "poc_text": "Call Support: +1 (800) 555-0199",
+        "integrated_text": "Call Support: +1 (800) 555-0199",
+        "exact_match": true,
+        "poc_conf": 0.975,
+        "integrated_conf": 0.975
+      },
+      {
+        "sample": "english_sample_en_14",
+        "script": "LATIN",
+        "poc_text": "Safety Compliance 100%",
+        "integrated_text": "Safety Compliance 100%",
+        "exact_match": true,
+        "poc_conf": 0.9713,
+        "integrated_conf": 0.9713
+      },
+      {
+        "sample": "english_sample_en_15",
+        "script": "LATIN",
+        "poc_text": "221B Baker Street, London",
+        "integrated_text": "221B Baker Street, London",
+        "exact_match": true,
+        "poc_conf": 0.98,
+        "integrated_conf": 0.98
+      }
+    ]
+  },
+  "benchmark_summary": {
+    "mean_detection_ms": 62.32,
+    "mean_routing_ms": 10.33,
+    "mean_recognition_ms": 238.12,
+    "mean_total_ms": 315.09,
+    "median_total_ms": 285.74,
+    "documents_evaluated": 4
+  },
+  "document_results": [
+    {
+      "document_name": "doc_hindi_pure",
+      "description": "Pure Hindi two-line document",
+      "expected_language": "HINDI",
+      "predicted_language": "HINDI",
+      "detection_count": 2,
+      "recognition_count": 2,
+      "unresolved_count": 0,
+      "scripts_detected": [
+        "DEVANAGARI",
+        "DEVANAGARI"
+      ],
+      "recognized_lines": [
+        "नमस्ते भारत",
+        "दिल्ली विश्वविद्यालय"
+      ],
+      "combined_text": "नमस्ते भारत\nदिल्ली विश्वविद्यालय",
+      "timings_ms": {
+        "detection": 49.93,
+        "routing": 9.51,
+        "recognition": 161.73,
+        "total": 227.22
+      }
+    },
+    {
+      "document_name": "doc_english_pure",
+      "description": "Pure English 3-line office sign",
+      "expected_language": "ENGLISH",
+      "predicted_language": "ENGLISH",
+      "detection_count": 3,
+      "recognition_count": 3,
+      "unresolved_count": 0,
+      "scripts_detected": [
+        "LATIN",
+        "LATIN",
+        "LATIN"
+      ],
+      "recognized_lines": [
+        "EMERGENCY EXIT",
+        "NAYRA Assistive Vision",
+        "olease keep this area clear."
+      ],
+      "combined_text": "EMERGENCY EXIT\nNAYRA Assistive Vision\nolease keep this area clear.",
+      "timings_ms": {
+        "detection": 58.65,
+        "routing": 16.22,
+        "recognition": 383.58,
+        "total": 461.66
+      }
+    },
+    {
+      "document_name": "doc_bilingual_mixed",
+      "description": "Mixed bilingual notice (English Header + Hindi Body + English Footer)",
+      "expected_language": "MIXED",
+      "predicted_language": "MIXED",
+      "detection_count": 3,
+      "recognition_count": 3,
+      "unresolved_count": 0,
+      "scripts_detected": [
+        "LATIN",
+        "DEVANAGARI",
+        "LATIN"
+      ],
+      "recognized_lines": [
+        "EMERGENCY EXIT",
+        "नमस्ते भारत",
+        "NAYRA Assistive Vision"
+      ],
+      "combined_text": "EMERGENCY EXIT\nनमस्ते भारत\nNAYRA Assistive Vision",
+      "timings_ms": {
+        "detection": 103.61,
+        "routing": 12.22,
+        "recognition": 204.33,
+        "total": 323.99
+      }
+    },
+    {
+      "document_name": "doc_receipt_numeric",
+      "description": "Receipt with alphanumeric codes and prices",
+      "expected_language": "ENGLISH",
+      "predicted_language": "ENGLISH",
+      "detection_count": 2,
+      "recognition_count": 2,
+      "unresolved_count": 0,
+      "scripts_detected": [
+        "LATIN",
+        "LATIN"
+      ],
+      "recognized_lines": [
+        "RECEIPT N0: 98214",
+        "TOTAL: $49.99"
+      ],
+      "combined_text": "RECEIPT N0: 98214\nTOTAL: $49.99",
+      "timings_ms": {
+        "detection": 37.1,
+        "routing": 3.35,
+        "recognition": 202.83,
+        "total": 247.49
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "patient_name": "User",
+  "home_address": "apne ghar par",
+  "primary_caregiver": "Rahul",
+  "caregiver_phone": "9876543210",
+  "familiar_persons": {
+    "p1": {
+      "person_id": "p1",
+      "name": "Rahul",
+      "relationship": "beta",
+      "phone": "9876543210",
+      "notes": "Roz aate hain",
+      "face_embedding": null
+    },
+    "p2": {
+      "person_id": "p2",
+      "name": "Priya",
+      "relationship": "caregiver",
+      "phone": "9812345678",
+      "notes": "Dawai aur khane ka dhyan rakhti hain.",
+      "face_embedding": null
+    }
+  }
+}

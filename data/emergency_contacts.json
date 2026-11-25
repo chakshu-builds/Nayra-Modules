@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Caregiver",
+    "phone": "+919215793330",
+    "relationship": "Primary Caregiver",
+    "is_primary": true
+  },
+  {
+    "name": "Dr. Sharma",
+    "phone": "9811223344",
+    "relationship": "doctor",
+    "is_primary": false
+  }
+]
